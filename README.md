@@ -79,5 +79,5 @@ pip install -U pip
 
 ## Install Ansible:
 ```bash
-pip install 'ansible-core>=2.15'
+pip install 'ansible-core==2.15'
 ```
