@@ -16,3 +16,6 @@ Ex:
 ```bash
 openstack security group rule create <security-group-id> --protocol tcp --dst-port 22 --remote-ip 0.0.0.0/0
 ```
+
+## Create Key Pair
+Download and keep key pair safe
