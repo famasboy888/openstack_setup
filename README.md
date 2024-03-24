@@ -45,6 +45,13 @@ sudo pvcreate /dev/sdb
 sudo vgcreate cinder-volumes /dev/sdb
 sudo vgs
 ```
+### Check that it was created
+```bash
+VG             #PV #LV #SN Attr   VSize   VFree
+  cinder-volumes   1   0   0 wz--n- <20.00g <20.00g
+  ubuntu-vg        1   1   0 wz--n- <38.00g      0       <========Successfully created!
+```
+
 
 ## Install Python build dependencies:
 ```bash
