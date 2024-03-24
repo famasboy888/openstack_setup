@@ -23,7 +23,7 @@ sudo dpkg -i libthai-data_0.1.29-1build1_all.deb
 ```bash
 sudo apt install git python3-dev libffi-dev gcc libssl-dev -y
 
-sudo apt install python3-venv
+sudo apt install python3-venv -y
 ```
 
 ## Create a virtual environment and activate it:
