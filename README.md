@@ -28,7 +28,7 @@ sudo apt install python3-venv -y
 
 ## Create a virtual environment, change owner and activate it:
 ```bash
-python3 -m venv /path/to/venv
+sudo python3 -m venv /path/to/venv
 
 sudo chown -R stack:stack /path/to/venv
 
