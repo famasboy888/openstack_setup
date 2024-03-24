@@ -19,6 +19,13 @@ wget https://github.com/k-dev1234/libthai-data_0.1.29-1build1_all/raw/main/libth
 sudo dpkg -i libthai-data_0.1.29-1build1_all.deb
 ```
 
+# Create cinder volume
+```bash
+sudo pvcreate /dev/sdb
+sudo vgcreate cinder-volumes /dev/sdb
+sudo vgs
+```
+
 ## Install Python build dependencies:
 ```bash
 sudo apt install git python3-dev libffi-dev gcc libssl-dev -y
