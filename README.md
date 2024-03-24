@@ -26,9 +26,11 @@ sudo apt install git python3-dev libffi-dev gcc libssl-dev -y
 sudo apt install python3-venv -y
 ```
 
-## Create a virtual environment and activate it:
+## Create a virtual environment, change owner and activate it:
 ```bash
 python3 -m venv /path/to/venv
+
+sudo chown -R stack:stack /path/to/venv
 
 source /path/to/venv/bin/activate
 ```
