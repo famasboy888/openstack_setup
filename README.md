@@ -22,4 +22,13 @@ sudo dpkg -i libthai-data_0.1.29-1build1_all.deb
 ## Install Python build dependencies:
 ```bash
 sudo apt install git python3-dev libffi-dev gcc libssl-dev -y
+
+sudo apt install python3-venv
+```
+
+## Create a virtual environment and activate it:
+```bash
+python3 -m venv /path/to/venv
+
+source /path/to/venv/bin/activate
 ```
