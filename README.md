@@ -24,7 +24,9 @@ sudo dpkg -i libthai-data_0.1.29-1build1_all.deb
 ### List Disks
 ```bash
 lsblk
+```
 
+```bash
 Output:
 loop0                       7:0    0 63.9M  1 loop /snap/core20/2105
 loop1                       7:1    0   87M  1 loop /snap/lxd/27037
@@ -36,7 +38,6 @@ sda                         8:0    0   40G  0 disk
   └─ubuntu--vg-ubuntu--lv 253:0    0   38G  0 lvm  /
 sdb                         8:16   0   20G  0 disk         <============ Check if present
 sr0                        11:0    1 1024M  0 rom
-
 ```
 ### Create Physical Volume and Volume Group for Cinder using the newly attached disk
 ```bash
