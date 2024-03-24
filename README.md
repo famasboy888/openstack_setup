@@ -132,7 +132,12 @@ kolla-ansible -i ./all-in-one deploy
 pip install python-openstackclient -c https://releases.openstack.org/constraints/upper/master
 ```
 
-## Generate clouds.yml:
+## Generate clouds.yaml:
 ```bash
 kolla-ansible post-deploy
 ```
+
+## Get Dashboard URL, username and password from generated clouds.yaml
+File is located in **/etc/kolla/clouds.yaml**
+
+
