@@ -117,3 +117,12 @@ kolla-genpwd
   ```bash
 sudo nano /etc/kolla/globals.yml
 ```
+
+ ## Deployment (Wait for each commands to finish):
+   ```bash
+kolla-ansible -i ./all-in-one bootstrap-servers
+
+kolla-ansible -i ./all-in-one prechecks
+
+kolla-ansible -i ./all-in-one deploy
+```
