@@ -20,6 +20,8 @@ sudo dpkg -i libthai-data_0.1.29-1build1_all.deb
 ```
 
 ## Create cinder volume
+*Go and add an external drive and attach to VMM
+
 ```bash
 sudo pvcreate /dev/sdb
 sudo vgcreate cinder-volumes /dev/sdb
