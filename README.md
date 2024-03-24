@@ -21,5 +21,5 @@ sudo dpkg -i libthai-data_0.1.29-1build1_all.deb
 
 ## Install Python build dependencies:
 ```bash
-sudo apt install git python3-dev libffi-dev gcc libssl-dev
+sudo apt install git python3-dev libffi-dev gcc libssl-dev -y
 ```
