@@ -114,7 +114,7 @@ kolla-genpwd
 ```
 
 ## Edit **/etc/kolla/globals.yml** using nano:
-Use this working file [global.yml](https://raw.githubusercontent.com/famasboy888/openstack_setup/main/globals.yml)
+Use this working file [global.yml](https://github.com/famasboy888/openstack_setup/blob/main/globals.yml)
 
 ```bash
 sudo nano /etc/kolla/globals.yml
