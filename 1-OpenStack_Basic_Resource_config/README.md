@@ -12,3 +12,7 @@ openstack image create --disk-format qcow2 --container-format bare \
 - Add SSH port
 - Add ICMP port for ping
 - Add HTTP port (optional)
+Ex:
+```bash
+openstack security group rule create <security-group-id> --protocol tcp --dst-port 22 --remote-ip 0.0.0.0/0
+```
