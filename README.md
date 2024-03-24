@@ -51,7 +51,10 @@ VG             #PV #LV #SN Attr   VSize   VFree
   cinder-volumes   1   0   0 wz--n- <20.00g <20.00g
   ubuntu-vg        1   1   0 wz--n- <38.00g      0       <========Successfully created!
 ```
-
+#### Or
+```bash
+sudo vgdisplay
+```
 
 ## Install Python build dependencies:
 ```bash
