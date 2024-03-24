@@ -19,3 +19,9 @@ openstack security group rule create <security-group-id> --protocol tcp --dst-po
 
 ## Create Key Pair
 Download and keep key pair safe
+
+## Create Instance Flavor
+```bash
+openstack flavor create --public kube.mini --id auto \
+    --ram 4096 --disk 5 --vcpus 4 --rxtx-factor 1
+```
