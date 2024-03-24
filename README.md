@@ -108,21 +108,31 @@ cp /path/to/venv/share/kolla-ansible/ansible/inventory/all-in-one .
 kolla-ansible install-deps
 ```
 
- ## Run random password generator:
- ```bash
+## Run random password generator:
+```bash
 kolla-genpwd
 ```
 
- ## Edit **/etc/kolla/globals.yml** using nano:
-  ```bash
+## Edit **/etc/kolla/globals.yml** using nano:
+```bash
 sudo nano /etc/kolla/globals.yml
 ```
 
- ## Deployment (Wait for each commands to finish):
-   ```bash
+## Deployment (Wait for each commands to finish):
+```bash
 kolla-ansible -i ./all-in-one bootstrap-servers
 
 kolla-ansible -i ./all-in-one prechecks
 
 kolla-ansible -i ./all-in-one deploy
+```
+
+## Install the OpenStack CLI client:
+```bash
+pip install python-openstackclient -c https://releases.openstack.org/constraints/upper/master
+```
+
+## Generate clouds.yml:
+```bash
+kolla-ansible post-deploy
 ```
