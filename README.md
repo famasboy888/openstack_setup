@@ -79,5 +79,41 @@ pip install -U pip
 
 ## Install Ansible:
 ```bash
-pip install 'ansible-core==2.15'
+pip install 'ansible-core>=2.15'
+```
+
+## Install kolla-ansible and its dependencies using pip:
+```bash
+pip install git+https://opendev.org/openstack/kolla-ansible@master
+```
+
+## Create the /etc/kolla directory:
+```bash
+sudo mkdir -p /etc/kolla
+sudo chown $USER:$USER /etc/kolla
+```
+
+## Copy globals.yml and passwords.yml to /etc/kolla directory:
+```bash
+cp -r /path/to/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
+```
+
+## Copy all-in-one inventory file to the current directory:
+```bash
+cp /path/to/venv/share/kolla-ansible/ansible/inventory/all-in-one .
+```
+
+## Install Ansible Galaxy dependencies:
+```bash
+kolla-ansible install-deps
+```
+
+ ## Run random password generator:
+ ```bash
+kolla-genpwd
+```
+
+ ## Edit **/etc/kolla/globals.yml** using nano:
+  ```bash
+sudo nano /etc/kolla/globals.yml
 ```
