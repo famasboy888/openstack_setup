@@ -71,3 +71,13 @@ sudo chown -R stack:stack /path/to/venv
 
 source /path/to/venv/bin/activate
 ```
+
+## Ensure the latest version of pip is installed inside the activated Python Environment(venv):
+```bash
+pip install -U pip
+```
+
+## Install Ansible:
+```bash
+pip install 'ansible-core>=2.15'
+```
