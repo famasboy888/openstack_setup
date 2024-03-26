@@ -2,6 +2,7 @@
 
 ## Create Instance Image
 Cirros image: [image](https://drive.google.com/file/d/1_2QpOGFHIb_rEivhUSJwBmeRxPC6RG01/view?usp=drive_link)
+
 Debian 12: [image](https://drive.google.com/file/d/1dsbccaAoTJTFIGeIt6sS4J7BZI2S9roA/view?usp=drive_link)
 
 ```bash
