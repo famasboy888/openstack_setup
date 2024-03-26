@@ -18,6 +18,10 @@ wget https://github.com/k-dev1234/libthai-data_0.1.29-1build1_all/raw/main/libth
 
 sudo dpkg -i libthai-data_0.1.29-1build1_all.deb
 ```
+### (Optional) For Debian OS:
+```bash
+sudo apt install build-essential libdbus-glib-1-dev libgirepository1.0-dev  python3-dbus -y
+```
 
 ## Create cinder volume
 *Go and add an external drive and attach to VMM
