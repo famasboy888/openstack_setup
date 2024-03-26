@@ -23,7 +23,11 @@ sudo dpkg -i libthai-data_0.1.29-1build1_all.deb
 *Go and add an external drive and attach to VMM
 ### List Disks
 ```bash
-lsblk
+sudo lsblk
+```
+or
+```bash
+sudo fdisk -l
 ```
 
 ```bash
@@ -58,9 +62,7 @@ sudo vgdisplay
 
 ## Install Python build dependencies:
 ```bash
-sudo apt install git python3-dev libffi-dev gcc libssl-dev -y
-
-sudo apt install python3-venv -y
+sudo apt install git python3-dev libffi-dev python3-venv gcc libssl-dev git python3-pip -y
 ```
 
 ## Create a virtual environment, change owner and activate it:
@@ -79,12 +81,12 @@ pip install -U pip
 
 ## Install Ansible:
 ```bash
-pip install 'ansible-core>=2.15'
+pip install 'ansible>=6,<8'
 ```
 
 ## Install kolla-ansible and its dependencies using pip:
 ```bash
-pip install git+https://opendev.org/openstack/kolla-ansible@master
+pip install git+https://opendev.org/openstack/kolla-ansible@stable/2023.1
 ```
 
 ## Create the /etc/kolla directory:
@@ -131,7 +133,7 @@ kolla-ansible -i ./all-in-one deploy
 
 ## Install the OpenStack CLI client:
 ```bash
-pip install python-openstackclient -c https://releases.openstack.org/constraints/upper/master
+pip install python-openstackclient -c https://releases.openstack.org/constraints/upper/2023.1
 ```
 
 ## Generate clouds.yaml:
@@ -139,7 +141,16 @@ pip install python-openstackclient -c https://releases.openstack.org/constraints
 kolla-ansible post-deploy
 ```
 
+## Authorize OpenStack CLI command:
+```bash
+source /etc/kolla/admin-openrc.sh
+```
 ## Get Dashboard URL, username and password from generated clouds.yaml
 File is located in **/etc/kolla/clouds.yaml**
+```bash
+cat /etc/kolla/clouds.yaml
+```
+
+
 
 
