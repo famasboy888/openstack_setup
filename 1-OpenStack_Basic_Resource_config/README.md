@@ -48,7 +48,7 @@ Append following:
 
 **net.ipv4.conf.ens33.proxy_arp = 1**
 
-#### For creating persistent IP Addr
+#### For creating persistent IP Addr (Ubuntu)
 ```bash
 sudo nano /etc/netplan/my_ip.yaml
 ```
@@ -67,4 +67,29 @@ network:
 
 ```bash
 sudo netplan try
+```
+
+#### For creating persistent IP Addr (Debian)
+
+Create your script. For example, **/usr/local/bin/your_script.sh**. Ensure the script is executable with the command **chmod +x /usr/local/bin/your_script.sh**.
+```bash
+#!/bin/bash
+
+sudo ip addr add 192.168.2.225/27 brd + dev br-ex
+sudo ip link set br-ex up
+```
+Use sudo nano /etc/systemd/system/your_service.service to create and open a new service file.
+```bash
+sudo nano /etc/systemd/system/your_service.service
+```
+```bash
+[Unit]
+Description=Add IP to br-ex
+
+[Service]
+ExecStartPre=/bin/sleep 30
+ExecStart=/usr/local/bin/my_brex.sh
+
+[Install]
+WantedBy=multi-user.target
 ```
