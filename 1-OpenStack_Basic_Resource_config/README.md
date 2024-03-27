@@ -42,7 +42,8 @@ and
 ```bash
 sudo nano /etc/sysctl.conf
 ```
-Append following
+Append following:
+
 **net.ipv4.ip_forward=1**
 
 **net.ipv4.conf.ens33.proxy_arp = 1**
