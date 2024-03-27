@@ -93,3 +93,8 @@ ExecStart=/usr/local/bin/my_brex.sh
 [Install]
 WantedBy=multi-user.target
 ```
+Enable and start the service. 
+
+Run **sudo systemctl enable your_service.service** to enable your service, and **sudo systemctl start your_service.service** to start it.
+
+Then try rebooting.
