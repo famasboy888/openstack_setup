@@ -47,3 +47,24 @@ Append following:
 **net.ipv4.ip_forward=1**
 
 **net.ipv4.conf.ens33.proxy_arp = 1**
+
+#### For creating persistent IP Addr
+```bash
+sudo nano /etc/netplan/my_ip.yaml
+```
+
+```bash
+network:
+ version: 2
+ ethernets:
+   br-ex:
+     dhcp4: no
+     addresses: [192.168.2.225/27]
+     gateway4: 192.168.2.35
+     nameservers:
+         addresses: [8.8.8.8,1.1.1.1]
+```
+
+```bash
+sudo netplan try
+```
