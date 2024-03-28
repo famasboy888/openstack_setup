@@ -68,6 +68,7 @@ network:
 ```bash
 sudo netplan try
 ```
+<hr>
 
 #### For creating persistent IP Addr Add (Debian)
 
@@ -96,6 +97,8 @@ WantedBy=multi-user.target
 Enable and start the service. 
 
 Run **sudo systemctl enable your_service.service** to enable your service, and **sudo systemctl start your_service.service** to start it.
+
+<hr>
 
 #### For creating persistent Static IP Addr (Debian)
 ```bash
