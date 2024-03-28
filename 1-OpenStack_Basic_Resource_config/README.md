@@ -69,7 +69,7 @@ network:
 sudo netplan try
 ```
 
-#### For creating persistent IP Addr (Debian)
+#### For creating persistent IP Addr Add (Debian)
 
 Create your script. For example, **/usr/local/bin/your_script.sh**. Ensure the script is executable with the command **chmod +x /usr/local/bin/your_script.sh**.
 ```bash
@@ -96,5 +96,18 @@ WantedBy=multi-user.target
 Enable and start the service. 
 
 Run **sudo systemctl enable your_service.service** to enable your service, and **sudo systemctl start your_service.service** to start it.
+
+#### For creating persistent Static IP Addr (Debian)
+```bash
+# The primary network interface
+#allow-hotplug ens33
+#iface ens33 inet dhcp
+auto ens33
+iface ens33  inet static
+ address 192.168.2.172
+ netmask 255.255.255.0
+ gateway 192.168.2.1
+ dns-nameservers 1.1.1.1 8.8.8.8
+```
 
 Then try rebooting.
