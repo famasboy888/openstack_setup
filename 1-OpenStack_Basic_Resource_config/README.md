@@ -99,6 +99,10 @@ Run **sudo systemctl enable your_service.service** to enable your service, and *
 
 #### For creating persistent Static IP Addr (Debian)
 ```bash
+sudo nano /etc/network/interfaces
+```
+
+```bash
 # The primary network interface
 #allow-hotplug ens33
 #iface ens33 inet dhcp
