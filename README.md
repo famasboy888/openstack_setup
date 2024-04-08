@@ -145,6 +145,11 @@ kolla-ansible -i ./all-in-one deploy
 pip install python-openstackclient -c https://releases.openstack.org/constraints/upper/2023.1
 ```
 
+if Octavia is installed:
+```bash
+pip install python-octaviaclient -c https://releases.openstack.org/constraints/upper/2023.1
+```
+
 ## Generate clouds.yaml:
 ```bash
 kolla-ansible post-deploy
